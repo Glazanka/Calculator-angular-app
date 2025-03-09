@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: "./about.component.html",
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent {}
+export class AboutComponent {
+  constructor(
+    private router: Router
+  ){}
+
+  goToCalculator(){
+    this.router.navigate(['/']);
+  }
+}

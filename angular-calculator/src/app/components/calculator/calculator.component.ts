@@ -36,8 +36,9 @@ export class CalculatorComponent {
       } catch {
         this.displayValue = 'Error';
       }
+      this.warningMessage = '';
     } else {
-      if (this.displayValue.length >= 15) {
+      if (this.displayValue.length >= 10) {
         this.warningMessage = 'Maximum input length reached!';
         return;
       }

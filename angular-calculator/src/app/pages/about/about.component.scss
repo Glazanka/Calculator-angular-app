@@ -1,3 +1,39 @@
 .about{
+    margin: 0;
+    padding: 0;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &__heading{
+        font-weight: bolder;
+        font-size: xx-large;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__paragraph{
+        font-weight: 500;
+        font-size: large;
+    }
+
+    &__button{
+        font-weight: 400;
+        font-size: large;
+        background-color: #00ff00;
+        cursor: pointer;
+        padding: 7px 17px;
+        border-radius: 0.3em;
+        border: 2px solid transparent;
+        transition: all 0.1s;
+
+        &:hover{
+            border: 2px solid #00ff00;
+            background-color: transparent;
+            color: #00ff00;
+        }
+    }
 }
