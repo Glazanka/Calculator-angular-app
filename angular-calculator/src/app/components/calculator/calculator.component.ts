@@ -46,7 +46,7 @@ export class CalculatorComponent {
 
       const lastChar = this.displayValue.slice(-1);
       if (['+', '-', '*', '/'].includes(button) && ['+', '-', '*', '/'].includes(lastChar)) {
-        this.displayValue = this.displayValue.slice(0, -1) + button; // Replace operator
+        this.displayValue = this.displayValue.slice(0, -1) + button;
       } 
 
       else if (this.displayValue === '0' && !['.', '+', '-', '*', '/'].includes(button)) {
