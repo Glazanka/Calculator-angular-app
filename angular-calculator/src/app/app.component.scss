@@ -1,0 +1,21 @@
+.navigation {
+    background: #222;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  
+    &__link {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2em;
+  
+      &:hover {
+        color: #00ff00;
+      }
+    }
+  }
+  
