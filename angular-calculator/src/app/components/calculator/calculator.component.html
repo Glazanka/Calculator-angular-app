@@ -1,1 +1,23 @@
-<p>calculator works!</p>
+<div class="calculator">
+    <div class="calculator__display">
+      <div class="calculator__display--inner">{{ displayValue }}</div>
+      <button class="calculator__display--backspace" (click)="onButtonClick('⌫')">⌫</button>
+    </div>
+  
+    <div *ngIf="warningMessage" class="warning">{{ warningMessage }}</div>
+  
+    <div class="buttons">
+      <button *ngFor="let button of buttons" 
+        [ngClass]="{
+            'buttons__transparent' : button === ' ',
+            'buttons__action': ['+', '-', '*', '/'].includes(button),
+            'buttons__equals': button === '=',
+            'buttons__clear': button === 'C',
+            'buttons__backspace': button === '⌫',
+        }"
+        (click)="onButtonClick(button)">
+        {{ button }}
+      </button>
+    </div>
+  </div>
+  

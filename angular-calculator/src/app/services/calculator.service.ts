@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CalculatorService {
-
-  constructor() { }
+  calculate(expression: string): number {
+    try {
+      return eval(expression);
+    } catch (error) {
+      console.error('Invalid expression:', expression);
+      return 0;
+    }
+  }
 }

@@ -1,0 +1,115 @@
+.calculator {
+    width: 20vw;
+    height: 60vh;
+    min-width: 300px;
+    min-height: 440px;
+    text-align: center;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    &__display {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #333;
+        padding: 10px;
+        border-radius: 1em;
+        width: 80%;
+
+        &--inner{
+            flex-grow: 1;
+            font-size: 2em;
+            text-align: right;
+            color: white;
+            padding: 5px;
+            width: 100%;
+        }
+
+        &--backspace{
+            background: transparent;
+            border: none;
+            color: orange;
+            opacity: 0.7;
+            font-size: 1.2em;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+              background-color: transparent;
+              opacity: 1;
+              font-weight: 700;
+            }
+        }
+    }
+  }
+  
+  
+  .warning {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+
+button{
+  cursor: pointer;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: 0.3s;
+  background: rgb(73, 73, 73);
+  color: white;
+  font-weight: 500;
+  width: 2.5em;
+  height: 2.5em;
+  justify-self: center;
+  align-self: center;
+
+  &:hover{
+    background: rgb(58, 58, 58);
+  }
+
+  &:active{
+    scale: 0.8;
+  }
+}
+  
+
+.buttons {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    
+  &__action {
+      color: #00ff00;
+      font-weight: bold;
+  }
+  &__equals{
+    background-color: green;
+    color: white;
+    &:hover{
+      background-color: rgb(0, 93, 0);
+    }
+  }
+  &__transparent{
+    background-color: transparent;
+    color: transparent;
+    visibility: hidden;
+  
+    &:hover {
+        cursor: default ;
+    }
+  }
+  &__clear{
+    color: red;
+  }
+}
