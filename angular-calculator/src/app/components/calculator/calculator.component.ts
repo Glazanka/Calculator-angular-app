@@ -57,12 +57,22 @@ export class CalculatorComponent {
       this.warningMessage = '';
     }
   }
-
   private evaluateExpression(expression: string): string {
     try {
-      return Function(`'use strict'; return (${expression})`)().toString();
+      let result = Function(`'use strict'; return (${expression})`)().toString();
+  
+      if (result.length > 10) {
+        if (result.includes('.')) {
+          result = parseFloat(result).toExponential(6);
+        } else {
+          result = result.slice(0, 10);
+        }
+      }
+      
+      return result;
     } catch {
       return 'Error';
     }
   }
+  
 }
