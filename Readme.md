@@ -76,6 +76,8 @@ This project is a simple calculator built using Angular, demonstrating core Angu
 2. Navigate to the project folder in a terminal.
 3. Install dependencies using:
     `npm install`
+4. Go to the angular file :
+    `cd .\angular-calculator\ `
 4. Start development server:
     `ng serve`
 5. Open the application in a browser at`http://localhost:4200/`
